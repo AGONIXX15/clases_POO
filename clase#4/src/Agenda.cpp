@@ -61,6 +61,38 @@ std::vector <Contacto> Agenda::get_vector() const
 	return this->v;
 }
 
+void Agenda::menu()
+{
+	int opc;
+	Contacto contactico;
+	do 
+	{
+		std::cout << "Bienvenido al menu de la agenda" << std::endl;
+		std::cout << "1. Para añadir contactos" << std::endl; 
+		std::cout << "2. listar los contactos" << std::endl;
+		std::cout << "3. eliminar contacto" << std::endl;
+		std::cout << "4. actualizar contacto" << std::endl;
+		std::cout << "5. salir..." << std::endl;
+		std::cin >> opc;
+		std::cin.ignore();
+		switch(opc)
+		{
+			case 1:
+				this->add_contacto(contactico);
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+
+		}
+	}while(opc != 5);
+}
+
 std::ostream& operator <<(std::ostream& os,const Agenda& obj)
 {
 	std::vector <Contacto> v= obj.get_vector();

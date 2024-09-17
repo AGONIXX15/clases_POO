@@ -13,8 +13,8 @@ class Agenda
 		void add_contacto(Contacto& contactito);
 		void update_contacto(Contacto& contactito,std::string number);
 		void delete_contacto(std::string n);
-		void delete_contacto(int n);
 		std::vector <Contacto> get_vector() const;
+		void menu();
 		friend std::ostream& operator <<(std::ostream& os,const Agenda& obj);
 
 };

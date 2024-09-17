@@ -1,0 +1,3 @@
+[submodule "talleres"]
+	path = talleres
+	url = https://github.com/AGONIXX15/Talleres_POO.git
