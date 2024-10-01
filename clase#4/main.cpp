@@ -7,9 +7,6 @@
 int main()
 {
 	Agenda obj;
-	Contacto contact;
-	obj.add_contacto(contact);
-	obj.add_contacto(contact);
-	std::cout << obj << std::endl;
+	obj.menu();
 	return 0;
 }

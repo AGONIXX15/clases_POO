@@ -1,4 +1,6 @@
 #include "../include/Agenda.h"
+#include <iostream>
+#include <string>
 #include <vector>
 
 
@@ -34,14 +36,18 @@ void Agenda::update_contacto(Contacto& contactico,std::string number)
 	
 }
 
-void Agenda::delete_contacto(std::string n)
+void Agenda::delete_contacto()
 {
+	int n;
+	std::cout << "indice de la persona que desea borrar" << std::endl;
+	std::cin >> n;
+	std::cin.ignore();
 	int j = 0;
 	for(int i = 0; i < v.size(); ++i)
 	{
-		if (v[i].nombre == n)
+		if (v[i].indice == n)
 		{
-			v.erase(v.begin()+i);
+			this->v.erase(v.begin()+i);
 			j += 1;
 		}else 
 			continue;
@@ -81,8 +87,10 @@ void Agenda::menu()
 				this->add_contacto(contactico);
 				break;
 			case 2:
+				std::cout << *this<< std::endl;
 				break;
 			case 3:
+				this->delete_contacto();
 				break;
 			case 4:
 				break;
